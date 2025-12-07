@@ -1,0 +1,12 @@
+{
+	"name": "formula1ls",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AzureBlobFS",
+		"typeProperties": {
+			"url": "https://practiseadls.dfs.core.windows.net/",
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQEFGMjQyQzYwLUUyRTgtNDEyNC04N0EzLUM5NjY5NkQ3Rjc2Rl9lMWFlYzQ5Zi05Y2VlLTRlMjgtYjBiMS0wNDU1ZmI2NmI5NmEiDQp9"
+		}
+	}
+}
