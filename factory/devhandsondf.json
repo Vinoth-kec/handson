@@ -1,0 +1,9 @@
+{
+	"name": "devhandsondf",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "f5f373b0-720d-46d5-95e7-baab57287d50",
+		"tenantId": "1ef2c70b-df07-42ba-b9ec-b88ac408a729"
+	}
+}
