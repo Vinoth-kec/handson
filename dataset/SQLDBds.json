@@ -1,0 +1,64 @@
+{
+	"name": "SQLDBds",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "SQLDBls",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "id",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "dataset_name",
+				"type": "varchar"
+			},
+			{
+				"name": "source_path",
+				"type": "varchar"
+			},
+			{
+				"name": "file_pattern",
+				"type": "varchar"
+			},
+			{
+				"name": "has_header",
+				"type": "bit"
+			},
+			{
+				"name": "delimiter",
+				"type": "char"
+			},
+			{
+				"name": "target_bronze_path",
+				"type": "varchar"
+			},
+			{
+				"name": "enabled",
+				"type": "bit"
+			},
+			{
+				"name": "last_processed_file",
+				"type": "varchar"
+			},
+			{
+				"name": "last_run_ts",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "last_status",
+				"type": "varchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "control",
+			"table": "metadata_files"
+		}
+	}
+}
