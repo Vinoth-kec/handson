@@ -1,0 +1,98 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Data Factory name",
+			"defaultValue": "devhandsondf"
+		},
+		"SQLDBls_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'SQLDBls'"
+		},
+		"bronzels_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'bronzels'"
+		},
+		"formula1ls_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'formula1ls'"
+		},
+		"SQLDBls_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "applictaionserver.database.windows.net"
+		},
+		"SQLDBls_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "application"
+		},
+		"SQLDBls_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "a_vmurugan"
+		},
+		"bronzels_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://practiseadls.dfs.core.windows.net/"
+		},
+		"formula1ls_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://practiseadls.dfs.core.windows.net/"
+		},
+		"containerUri": {
+			"type": "string",
+			"metadata": "URI to storage account containing linked ARM templates"
+		},
+		"containerSasToken": {
+			"type": "string",
+			"metadata": "Sas token to storage account containing linked ARM templates"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "devhandsondf_ArmTemplate_0",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2024-03-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_0.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"SQLDBls_password": {
+						"value": "[parameters('SQLDBls_password')]"
+					},
+					"bronzels_accountKey": {
+						"value": "[parameters('bronzels_accountKey')]"
+					},
+					"formula1ls_accountKey": {
+						"value": "[parameters('formula1ls_accountKey')]"
+					},
+					"SQLDBls_properties_typeProperties_server": {
+						"value": "[parameters('SQLDBls_properties_typeProperties_server')]"
+					},
+					"SQLDBls_properties_typeProperties_database": {
+						"value": "[parameters('SQLDBls_properties_typeProperties_database')]"
+					},
+					"SQLDBls_properties_typeProperties_userName": {
+						"value": "[parameters('SQLDBls_properties_typeProperties_userName')]"
+					},
+					"bronzels_properties_typeProperties_url": {
+						"value": "[parameters('bronzels_properties_typeProperties_url')]"
+					},
+					"formula1ls_properties_typeProperties_url": {
+						"value": "[parameters('formula1ls_properties_typeProperties_url')]"
+					}
+				}
+			},
+			"dependsOn": []
+		}
+	]
+}

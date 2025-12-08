@@ -1,0 +1,39 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "devhandsondf"
+		},
+		"SQLDBls_password": {
+			"value": ""
+		},
+		"bronzels_accountKey": {
+			"value": ""
+		},
+		"formula1ls_accountKey": {
+			"value": ""
+		},
+		"SQLDBls_properties_typeProperties_server": {
+			"value": "applictaionserver.database.windows.net"
+		},
+		"SQLDBls_properties_typeProperties_database": {
+			"value": "application"
+		},
+		"SQLDBls_properties_typeProperties_userName": {
+			"value": "a_vmurugan"
+		},
+		"bronzels_properties_typeProperties_url": {
+			"value": "https://practiseadls.dfs.core.windows.net/"
+		},
+		"formula1ls_properties_typeProperties_url": {
+			"value": "https://practiseadls.dfs.core.windows.net/"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}
